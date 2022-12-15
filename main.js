@@ -4,6 +4,7 @@ burger();
 
 function burger() {
   const burgerBtn = document.querySelector('.header__burger-btn');
+  const headerItems = document.querySelectorAll('.header__nav-item');
   burgerBtn.addEventListener('click', () => {
     document.querySelector('.header__nav-list').classList.toggle('header__nav-list-transform');
     document.querySelector('.span-1').classList.toggle('span-1-transform');
@@ -11,6 +12,15 @@ function burger() {
     document.querySelector('.span-3').classList.toggle('span-3-transform');
     document.body.classList.toggle('no-scroll');
   })
+  headerItems.forEach(function(item) {
+    item.addEventListener('click',function() {
+      document.querySelector('.header__nav-list').classList.remove('header__nav-list-transform');
+      document.querySelector('.span-1').classList.remove('span-1-transform');
+      document.querySelector('.span-2').classList.remove('span-2-transform');
+      document.querySelector('.span-3').classList.remove('span-3-transform');
+      document.body.classList.remove('no-scroll');
+    })
+  });
 } // End of burger
 
 // form label on focus
