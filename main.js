@@ -234,7 +234,7 @@ forms.forEach((form) => {
     e.preventDefault();
      Swal.fire(
       'Good!',
-      'We will call you back soon',
+      'We will call you',
       'success'
     )
     const inputs = document.querySelectorAll('.form-input');
@@ -261,12 +261,7 @@ window.onfocus = () => {
 
 
 
- // alert('your message sent');
-    //  Swal.fire(
-    //   'Good!',
-    //   'We will call you back soon',
-    //   'success'
-    // )
+
 
 
 
